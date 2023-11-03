@@ -101,12 +101,26 @@ console.log(tinderUser)
 // For All key
 console.log(Object.keys(tinderUser))
 // For all values
-console.log(Object.values(tinderUser))
+// console.log(Object.values(tinderUser))
 
 // All enteries in array form
-console.log(Object.entries(tinderUser))
+// console.log(Object.entries(tinderUser))
 
 // For check key is there or not
-console.log(Object.hasOwnProperty("name"))
+// console.log(Object.hasOwnProperty("name"))
+
+
+// ////////// Object De-Structure Objects /////////// //
+
+const games = {
+  game1: "BGMI",
+  game2: "Valorant",
+  game3: "Pokemon Go",
+  game4: "Temple run"
+}
+
+// console.log(games.game3)
+const {game4: ga} = games
+console.log(ga)
 
 
