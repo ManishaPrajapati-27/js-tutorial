@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body style="background-color: #474747;">
+
+    <script>
+        const div = document.createElement("div")
+        console.log(div);
+        div.className = "app";
+        div.id = "5";
+        div.style.backgroundColor = "orange";
+        div.style.padding = "20px";
+        // div.setAttribute = ("class", "main-div")
+        // div.innerText = "Hello JS";
+        const text = document.createTextNode("Hello It's me");
+        div.appendChild(text);
+        div.innerHTML = "<h1>Hello It's Me Manisha</h1> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus eum cumque id explicabo soluta tempore, praesentium esse voluptatum voluptatem earum!</p>"
+
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>
