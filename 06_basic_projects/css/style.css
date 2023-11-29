@@ -8,12 +8,12 @@
   --sans-serif: "Poppins", sans-serif;
 
   /* Color */
-  --primary: rgb(255, 211, 16);
+  --primary: #ffd310;
   --secondary: #160240;
   --light: #ffffff;
   --light-alt: #dadada;
-  --dark: rgb(3, 18, 34);
-  --dark-alt: #414141;
+  --dark: #010c18;
+  --dark-alt: #262a2c;
 }
 * {
   margin: 0;
@@ -28,7 +28,7 @@
 
 *::selection {
   background: var(--primary);
-  color: var(--light);
+  color: var(--dark);
 }
 
 ::-webkit-scrollbar {
@@ -101,21 +101,39 @@ p a:hover {
   color: var(--primary);
 }
 
-/* Color Changer */
-
-.color-changer {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.color-changer h2 {
+.heading {
   font-size: 35px;
   color: var(--light);
   margin-bottom: 30px;
   text-align: center;
+}
+
+.button{
+  padding: 15px 30px;
+  border: 0;
+  outline: 0;
+  background: var(--primary);
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.button:hover{
+  background: var(--light);
+  color: var(--dark-alt);
+}
+
+/* Color Changer */
+
+.color-changer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .color-changer h5 {
@@ -128,6 +146,8 @@ p a:hover {
 
 .color-changer .buttons {
   margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
 }
 
 .color-changer .buttons .button {
@@ -136,7 +156,7 @@ p a:hover {
   height: 80px;
   border: 1px solid var(--light);
   background: rgb(255, 211, 16);
-  box-shadow: 0 0 20px #5e5c5c;
+  box-shadow: 0 0 20px #7a787873;
   cursor: pointer;
 }
 
@@ -170,3 +190,138 @@ p a:hover {
 .color-changer .buttons .button:nth-child(10) {
   background: rgb(120, 16, 255);
 }
+
+
+/* BMI Calculator */
+
+.bmi-calculator{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bmi-calculator .card{
+  background: var(--dark-alt);
+  padding: 30px;
+}
+
+.bmi-calculator .card h2{
+  font-size: 30px;
+  color: var(--light);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.bmi-calculator .card .input-filed{
+  margin-bottom: 20px;
+}
+
+.bmi-calculator .card h5{
+  font-size: 18px;
+  color: var(--light-alt);
+  font-weight: 400;
+  margin-bottom: 15px;
+  
+}
+
+.bmi-calculator .card .input-filed label{
+  font-size: 16px;
+  color: var(--light-alt);
+  font-weight: 400;
+  margin-right: 20px
+}
+
+.bmi-calculator .card .input-filed input{
+  padding: 15px 20px;
+  width: 100%;
+  border: 0;
+  background: var(--light-alt);
+  font-size: 16px;
+}
+
+.bmi-calculator .card .result h4{
+  font-size: 18px;
+  color: var(--light-alt);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Digital Clock */
+
+.digital-clock{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-clock .clock{
+  background: var(--primary);
+  padding: 20px;
+  display: inline-block;
+}
+
+.digital-clock .clock h4{
+  font-size: 22px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+
+/* Guess Number */
+
+.guess-number{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.guess-number h3{
+  font-size: 22px;
+  color: var(--light);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.guess-number .form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.guess-number .para{
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.guess-number .input-num{
+  width: 100px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #ffffff91;
+  background: none;
+  color: var(--light);
+  text-align: center;
+}
+
+.guess-number .info{
+  text-align: center;
+}
+
+.guess-number h4{
+  font-size: 20px;
+  color: var(--light);
+  font-weight: 500;
+  margin: 20px 0;
+  color: #ffea8c;
+}
+
+
+

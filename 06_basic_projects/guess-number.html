@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    
+    <div class="guess-number">
+        <h2 class="heading">
+            Guess The Number Game
+        </h2>
+        <div class="para">
+            <p>Try to select number between 1 to 100.</p>
+            <p>You have 10 attempts to guess the number.</p>
+        </div>
+        <form class="form">
+            <h3>Enter Guess Number</h3> 
+            <input type="text" class="input-num">
+            <button type="submit" class="button" id="subBtn">Submit Guess</button>
+            <p id="alert-ms"></p>
+        </form>
+
+        <div class="info">
+            <p>Previous Selected : <span class="guesses"></span></p>
+            <p>Your Remaining Attempts : <span class="attemts">10</span></p>
+            <h4 class="low-or-high"></h4>
+        </div>
+
+
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
