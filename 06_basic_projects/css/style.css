@@ -108,7 +108,7 @@ p a:hover {
   text-align: center;
 }
 
-.button{
+.button {
   padding: 15px 30px;
   border: 0;
   outline: 0;
@@ -121,7 +121,7 @@ p a:hover {
   transition: 0.5s all ease;
 }
 
-.button:hover{
+.button:hover {
   background: var(--light);
   color: var(--dark-alt);
 }
@@ -191,48 +191,46 @@ p a:hover {
   background: rgb(120, 16, 255);
 }
 
-
 /* BMI Calculator */
 
-.bmi-calculator{
+.bmi-calculator {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.bmi-calculator .card{
+.bmi-calculator .card {
   background: var(--dark-alt);
   padding: 30px;
 }
 
-.bmi-calculator .card h2{
+.bmi-calculator .card h2 {
   font-size: 30px;
   color: var(--light);
   font-weight: 600;
   margin-bottom: 30px;
 }
 
-.bmi-calculator .card .input-filed{
+.bmi-calculator .card .input-filed {
   margin-bottom: 20px;
 }
 
-.bmi-calculator .card h5{
+.bmi-calculator .card h5 {
   font-size: 18px;
   color: var(--light-alt);
   font-weight: 400;
   margin-bottom: 15px;
-  
 }
 
-.bmi-calculator .card .input-filed label{
+.bmi-calculator .card .input-filed label {
   font-size: 16px;
   color: var(--light-alt);
   font-weight: 400;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
-.bmi-calculator .card .input-filed input{
+.bmi-calculator .card .input-filed input {
   padding: 15px 20px;
   width: 100%;
   border: 0;
@@ -240,7 +238,7 @@ p a:hover {
   font-size: 16px;
 }
 
-.bmi-calculator .card .result h4{
+.bmi-calculator .card .result h4 {
   font-size: 18px;
   color: var(--light-alt);
   font-weight: 400;
@@ -249,7 +247,7 @@ p a:hover {
 
 /* Digital Clock */
 
-.digital-clock{
+.digital-clock {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -257,22 +255,21 @@ p a:hover {
   justify-content: center;
 }
 
-.digital-clock .clock{
+.digital-clock .clock {
   background: var(--primary);
   padding: 20px;
   display: inline-block;
 }
 
-.digital-clock .clock h4{
+.digital-clock .clock h4 {
   font-size: 22px;
   color: var(--dark);
   font-weight: 600;
 }
 
-
 /* Guess Number */
 
-.guess-number{
+.guess-number {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -280,26 +277,26 @@ p a:hover {
   justify-content: center;
 }
 
-.guess-number h3{
+.guess-number h3 {
   font-size: 22px;
   color: var(--light);
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.guess-number .form{
+.guess-number .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.guess-number .para{
+.guess-number .para {
   margin-bottom: 15px;
   text-align: center;
 }
 
-.guess-number .input-num{
+.guess-number .input-num {
   width: 100px;
   padding: 10px 20px;
   margin-bottom: 20px;
@@ -311,17 +308,14 @@ p a:hover {
   text-align: center;
 }
 
-.guess-number .info{
+.guess-number .info {
   text-align: center;
 }
 
-.guess-number h4{
+.guess-number h4 {
   font-size: 20px;
   color: var(--light);
   font-weight: 500;
   margin: 20px 0;
   color: #ffea8c;
 }
-
-
-
