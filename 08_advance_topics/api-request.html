@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+
+<script>
+    const requestURL = "https://api.github.com/users/ManishaPrajapati-27";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestURL);
+    xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText); // Parse the response text to JSON
+            console.log(data);
+            console.log(typeof data)
+            console.log(data.followers);
+        } else {
+            console.error('Request failed with status:', xhr.status);
+        }
+    }
+};
+xhr.send();
+</script>
+</body>
+</html>

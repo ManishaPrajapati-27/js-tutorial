@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+        ul li img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul id="images">
+        <li>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZ_-hlbd7IR897690OVhJTRPJNXmMcDFWoA&usqp=CAU"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSoTJvcIrzn3Bumeo1B4Z4DV2XXQvzwAmTZw&usqp=CAU"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhze-QNnca2liBrhRj4CjswGZSkqbhvSDJsQ&usqp=CAU"
+            alt="" id="valChar"
+          />
+          
+        </li>
+      </ul>
+    </div>
+
+    <script>
+        // document.getElementById("valChar").onclick = () =>  {
+        //     alert("Heyy..")
+        // } 
+
+        // AttachEvent
+        // jQuery - on
+        
+        // type, timeStamp, DefaultPrevented
+        // target, srcElemment, toElement, target
+        // ClientX, clientY, screen1, screen2
+        // altKey, ctrlkey, shiftKey, keyCode
+        
+        // document.getElementById("valChar").addEventListener("click", (e)=>{
+        //     alert("Heyy..")           
+        //     console.log(e)     
+        // });
+
+        // Propogation
+        // Bubling Event : Child to parent
+        // If we give true then it works opposite
+        // document.getElementById("valChar").addEventListener("click", (e)=>{
+        //     alert("Heyy..")           
+        //     console.log(e)  
+        // e.stopPropagation
+        // }, true);
+         
+        // e.stopPropagation :  If we want to stop propogation
+
+
+        document.getElementById("images").addEventListener("click", (e)=>{      
+            // console.log(e.target.parentNode)   
+            // let removeIt = e.target.parentNode;
+            if(e.target.tagName === "IMG"){
+              console.log(e.target.tagName)   
+              let removeIt = e.target.parentNode;
+              removeIt.remove();   
+            }
+            // removeIt.parentNode.removeChild(removeIt)   
+        });
+
+    </script>
+  </body>
+</html>

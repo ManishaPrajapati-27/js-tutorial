@@ -106,6 +106,11 @@ p a:hover {
   color: var(--light);
   margin-bottom: 30px;
   text-align: center;
+  font-weight: 600;
+}
+
+.heading span{
+  color: var(--primary);
 }
 
 .button {
@@ -318,4 +323,86 @@ p a:hover {
   font-weight: 500;
   margin: 20px 0;
   color: #ffea8c;
+}
+
+/* Unlimited Color */
+
+.unlimited-color{
+ height: 100vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.unlimited-color .heading{
+  margin-bottom: 10px;
+}
+
+/* Keyboard */
+
+.keyboard{
+ height: 100vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 20px;
+}
+
+
+.keyboard table, th, td {
+  border: 1px solid var(--light);
+  color: var(--light);
+  padding: 15px;
+  border-collapse: collapse;
+}
+
+.keyboard table th{
+  font-weight: 500;
+  background: var(--secondary);
+  border: 1px solid var(--light);
+  color: var(--primary);
+}
+
+.keyboard table th, td {
+  color: var(--light);
+  padding: 15px;
+}
+
+/* Github Info */
+
+.github-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.github-info .info .image{
+  width: 300px;
+}
+
+.github-info .info .image img{ 
+  border: 7px solid var(--secondary);
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px #212201;
+}
+
+.github-info .info h4{
+  font-size: 28px;
+  color: var(--light);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.github-info .info .info-in{
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

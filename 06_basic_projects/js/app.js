@@ -86,12 +86,13 @@ const digiClock = () =>{
   setInterval(()=>{
     let date = new Date()
     clock.innerHTML = `<h4>${date.toLocaleTimeString()}</h4>`
-  },1000)
+  }, 1000)
 }
 
 // Guess Number
 
-let randomNum = parseInt(Math.random() * 100 + 1);
+const guessNumber = () =>{
+  let randomNum = parseInt(Math.random() * 100 + 1);
 
 const submit = document.getElementById("subBtn");
 const userInput = document.querySelector(".input-num");
@@ -182,5 +183,99 @@ newGameButton.addEventListener("click", ()=>{
   playGame = true;
 })
 }
+}
+
+// Unlimited Color
+
+const unlimitedColor = () =>{
+  const randomColor = () =>{
+    const hexColor = "0123456789ABCDEF";
+    let color = "#";
+    for(i = 0; i < 6; i++ ){
+      color += hexColor[Math.floor(Math.random() * 16)]
+    }
+    return color;
+  }
+  
+  console.log(randomColor());
+  
+  let intervalColor;
+  const startChangeColor = () =>{
+    changeColor = () =>{
+      document.body.style.backgroundColor = randomColor();
+    }
+    if(!intervalColor){
+      intervalColor = setInterval(changeColor, 1000)
+    }
+  }
+  
+  const stopChangeColor = () =>{
+   clearInterval(intervalColor)
+   intervalColor = null;
+  }
+  
+  document.querySelector("#start").addEventListener("click", startChangeColor)
+  document.querySelector("#stop").addEventListener("click", stopChangeColor)
+}
+
+// Keyboard
+
+const keyBoard = () =>{
+  const insert = document.getElementById("insertKey");
+
+  window.addEventListener("keydown", (e) =>{
+    console.log(e);
+    insert.innerHTML = `
+    <div class = "color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>Key Code</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key === " " ? "space" : e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+    </div>
+    `
+  })
+}
+
+
+// Github Info
+
+const requestURL = "https://api.github.com/users/ManishaPrajapati-27";
+const xhr = new XMLHttpRequest();
+xhr.open("GET", requestURL);
+xhr.onreadystatechange = () => {
+  const gitInfo = document.querySelector(".github-info .info")
+if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText); // Parse the response text to JSON
+        console.log(data);
+        console.log(typeof data)
+        console.log(data.followers);
+        gitInfo.innerHTML = `
+        <div class="image">
+            <img src=${data.avatar_url} alt="">
+        </div>
+        <h4>${data.name}</h4>
+        <div class = "info-in">
+        <p>Followers : ${data.followers}</p>
+        <p>Following : ${data.following}</p>
+        </div>
+        <p>${data.location}</p>
+        `
+
+    } else {
+        console.error('Request failed with status:', xhr.status);
+    }
+}
+};
+xhr.send();
+
 
 
